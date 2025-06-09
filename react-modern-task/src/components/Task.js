@@ -9,19 +9,21 @@ function Task({ task }) {
     const targetColumn = columns.find((col) => col.id === newColumnID);
     if (!targetColumn) return;
 
+    const tasksInTargetColumn = tasks.filter((t) => t.idColumn === newColumnID);
+    if (tasksInTargetColumn.length >= targetColumn.limit) return;
     const updatedTasks = tasks.map((t) =>
       t.id === task.id ? { ...t, idColumn: newColumnID } : t
     );
     setTasks(updatedTasks);
   };
   return (
-    <div>
+    <div className="kanban-task">
       <p>{task.name}</p>
       <p>{task.user}</p>
 
-      <div>
-        <button onClick={() => moveTask(-1)}>Poprzednie</button>
-        <button onClick={() => moveTask(+1)}>Następne</button>
+      <div className="buttons">
+        <button onClick={() => moveTask(-1)}>Prev</button>
+        <button onClick={() => moveTask(+1)}>Next</button>
       </div>
     </div>
   );

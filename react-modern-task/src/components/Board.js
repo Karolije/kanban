@@ -5,7 +5,7 @@ import Column from "./Column";
 function Board() {
   const { columns, tasks } = useContext(Context);
   return (
-    <div className="board">
+    <div className="kanban-board">
       {columns.map((column) => {
         const columnTasks = tasks.filter((task) => task.idColumn === column.id);
         return <Column key={column.id} column={column} tasks={columnTasks} />;

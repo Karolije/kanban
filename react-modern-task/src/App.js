@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <KanbanProvider>
-        <h1>Tablica Kanban</h1>
+        <h1 className="title">Tablica Kanban</h1>
         <Form />
         <Board />
       </KanbanProvider>
