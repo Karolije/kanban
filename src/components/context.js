@@ -10,9 +10,10 @@ export const KanbanProvider = ({ children }) => {
   ];
 
   const defaultTasks = [
-    { id: 1, name: "Task1", idColumn: 1, user: "Anna" },
-    { id: 2, name: "Task2", idColumn: 1, user: "Anna" },
-    { id: 3, name: "Task3", idColumn: 1, user: "Anna" },
+    { id: 1, name: "Zaimplementuj komponent React", idColumn: 1, user: "Anna" },
+    { id: 2, name: "Napisz testy jednostkowe", idColumn: 1, user: "Piotr" },
+    { id: 3, name: "Skonfiguruj Redux", idColumn: 1, user: "Anna" },
+    { id: 4, name: "Stwórz responsywny layout", idColumn: 2, user: "Piotr" },
   ];
 
   const [columns, setColumns] = useState(() => {
