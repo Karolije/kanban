@@ -4,9 +4,9 @@ export const Context = createContext();
 
 export const KanbanProvider = ({ children }) => {
   const defaultColumns = [
-    { id: 1, name: "Pending", limit: 4 },
-    { id: 2, name: "Doing", limit: 3 },
-    { id: 3, name: "Done", limit: 2 },
+    { id: 1, name: "Do zrobienia", limit: 4 },
+    { id: 2, name: "W trakcie", limit: 3 },
+    { id: 3, name: "Zrobione", limit: 2 },
   ];
 
   const defaultTasks = [
